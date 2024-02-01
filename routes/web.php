@@ -13,6 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
     return view('user.dashboard');
-});
+})->name('dashboard');
+    
+
+
+// Sample Routes
+Route::get('/complainant', function () {
+    return view('user.complainant.index');
+})->name('complainant.index');
+
+Route::get('/create/complainant', function () {
+    return view('user.complainant.create');
+})->name('complainant.create');
+
+
+Route::get('/otp.confirmation', function () {
+    return view('threads.otp_confirmation');
+})->name('otp.confirmation');
