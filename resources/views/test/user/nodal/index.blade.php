@@ -40,130 +40,44 @@
         <div class="col-lg-12 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
-      <h4 class="card-title">Striped Table</h4>
+      <h4 class="card-title">Nodal Assigned Complaints</h4>
         <!-- <p class="card-description">
             Add class <code>.table-striped</code>
         </p> -->
 
-            <div class="template-demo">
+            <!-- <div class="template-demo">
                 <button onclick="window.location='{{ route('complainant.create') }}'"  type="button" class="btn btn-primary"> Register Complainant </button>
-            </div>
+            </div> -->
 
       <div class="table-responsive">
         <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>
-                User
-              </th>
-              <th>
-                UID
-              </th>
-              <th>
-                Name
-              </th>
-              <th>
-                Email Address
-              </th>
-              <th>
-                Address
-              </th>
-              <th>
-                Deadline
-              </th>
-              <th>
-                Edit - Delete
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="py-1">
-                <img src="../../images/faces/face1.jpg" alt="image"/>
-              </td>
-              <td>
-                234ff
-              </td>
-              <td>
-                Herman Beck
-              </td>
-              <td>
-                <!-- <div class="progress">
-                  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div> -->
-                admin@gmail.com
-              </td>
-              <td>
-                $ 77.99
-              </td>
-              <td>
-                May 15, 2015
-              </td>
-              <td>
-              Edit - Delete
-              </td>
-            </tr>
-
-            <tr>
-              <td class="py-1">
-                <img src="../../images/faces/face2.jpg" alt="image"/>
-              </td>
-              <td>
-                234ff
-              </td>
-              <td>
-                Messsy Adam
-              </td>
-              <td>
-                <!-- <div class="progress">
-                  <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div> -->
-                admin@gmail.com
-              </td>
-              <td>
-                $245.30
-              </td>
-              <td>
-                July 1, 2015
-              </td>
-              <td>
-              Edit - Delete
-              </td>
-            </tr>
-
-            <tr>
-              <td class="py-1">
-                <img src="../../images/faces/face3.jpg" alt="image"/>
-                <img src="../../images/faces/face4.jpg" alt="image"/>
-                <img src="../../images/faces/face5.jpg" alt="image"/>
-                <img src="../../images/faces/face6.jpg" alt="image"/>
-                <img src="../../images/faces/face7.jpg" alt="image"/>
-              </td>
-              <td>
-                234ff
-              </td>
-              <td>
-                John Richards
-              </td>
-              <td>
-                <!-- <div class="progress">
-                  <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div> -->
-                welcome@gmail.com
-              </td>
-              <td>
-                $138.00
-              </td>
-              <td>
-                Apr 12, 2015
-              </td>
-              <td>
-              Edit - Delete
-              </td>
-            </tr>
-            
-          </tbody>
-        </table>
+            <thead>
+              <tr>
+                <th> #Index </th>
+                <th> Complaint No. </th>
+                <th> Date of Complaint </th>
+                <th> Complaint Against </th>
+                <th> Department/Section </th>
+                <th> ONGC Work Centre </th>
+                <th> Action </th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td> 1 </td>
+                <td> CM001NO65 </td>
+                <td> 02-Feb-2024 </td>
+                <td> User1, User2 </td>
+                <td> Department/Section 1 </td>
+                <td> ONGC Centre Noida </td>
+                <td>
+                  <a href="{{ route('nodal.complainant.edit') }}">Edit</a> | View
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
       </div>
     </div>
   </div>

@@ -37,54 +37,70 @@
         <div class="content-wrapper">
           <div class="row">
 
-
-
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Registration of Complainant</h4>
                   <p class="card-description" onclick="window.location='{{ route('otp.confirmation') }}'" > otp confirmation </p>
 
-                  <form class="forms-sample">
-
+                  <form class="forms-sample" action="{{ route('fco.complainant.index') }}" >
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Name</label>
-                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
-                            </div>
+                          <div class="form-group">
+                              <label for="exampleInputUsername1">Nodel Officer</label>
+                              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option>Officers 1</option>
+                                <option>Officers 2</option>
+                              </select>
+                          </div>
                         </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputUsername1">Username</label>
-                            <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="exampleInputUsername1">Work Location</label>
+                              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option>Location 1</option>
+                                <option>Location 2</option>
+                              </select>
+                          </div>
                         </div>
-                      </div>
                     </div>
 
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Email Address </label>
-                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
-                            </div>
+                          <div class="form-group">
+                              <label for="exampleInputUsername1">Complaint Status</label>
+                              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option>With Nodal Officer</option>
+                                <option>With FCO</option>
+                                <option>Under FRMC deliberations for Closure/Investigation</option>
+                                <option>Under Investigation</option>
+                                <option value="">Fraud Not Established after FRMC Deliberation</option>
+                                
+                              </select>
+                          </div>
                         </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleInputUsername1">Mobile Number</label>
-                            <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="exampleInputUsername1">Work Centre</label>
+                              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option>Centre 1</option>
+                                <option>Centre 2</option>
+                              </select>
+                          </div>
                         </div>
-                      </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Address</label>
-                                <textarea name="" class="form-control" id="exampleInputUsername1" cols="30" rows="4"></textarea>
-                            </div>
-                      </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="exampleInputUsername1">Withdrawn – to be ignored</label>
+                              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option>YES</option>
+                                <option>NO</option>
+                              </select>
+                          </div>
+                        </div>
                     </div>
 
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>

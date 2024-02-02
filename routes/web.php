@@ -18,21 +18,58 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('user.dashboard');
+    return view('test.user.dashboard');
 })->name('dashboard');
     
 
 
+
 // Sample Routes
 Route::get('/complainant', function () {
-    return view('user.complainant.index');
+    return view('test.user.complainant.index');
 })->name('complainant.index');
 
 Route::get('/create/complainant', function () {
-    return view('user.complainant.create');
+    return view('test.user.complainant.create');
+})->name('complainant.create');
+
+Route::get('/create/complainant', function () {
+    return view('test.user.complainant.create');
 })->name('complainant.create');
 
 
-Route::get('/otp.confirmation', function () {
-    return view('threads.otp_confirmation');
+
+
+Route::get('/otp/confirmation', function () {
+    return view('test.threads.otp_confirmation');
 })->name('otp.confirmation');
+
+
+// nodal
+Route::get('/nodal', function () {
+    return view('test.user.nodal.dashboard');
+})->name('nodal.dashboard');
+
+Route::get('/nodal/complainant', function () {
+    return view('test.user.nodal.index');
+})->name('nodal.complainant.index');
+
+Route::get('/nodal/complainant/edit', function () {
+    return view('test.user.nodal.edit');
+})->name('nodal.complainant.edit');
+
+
+
+
+// fto
+Route::get('/fco', function () {
+    return view('test.user.fco.dashboard');
+})->name('fco.dashboard');
+
+Route::get('/fco/complainant', function () {
+    return view('test.user.fco.index');
+})->name('fco.complainant.index');
+
+Route::get('/fco/complainant/edit', function () {
+    return view('test.user.fco.edit');
+})->name('fco.complainant.edit');

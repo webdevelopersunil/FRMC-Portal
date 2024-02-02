@@ -33,24 +33,60 @@
       <!-- partial:../../partials/_sidebar.html -->
       @include('includes/_sidebar')
       <!-- partial -->
-      <div class="main-panel">        
+      <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
 
 
 
-          <div class="col-12 grid-margin stretch-card">
+            <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">OTP Confirmation</h4>
-                  <p class="card-description">
-                     <code>OTP</code>
-                  </p>
-                  <form class="form-inline">
-                    <label class="sr-only" for="inlineFormInputName2">Name</label>
-                    <input type="number" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="******">
-                  
-                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+
+                  <h4 class="card-title">Updation by Nodal Officer</h4>
+                  <p class="card-description" > Detail Page </p>
+
+                  <form class="forms-sample" action="{{ route('nodal.complainant.index') }}" >
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Uploading Preliminary Report</label>
+                                <input type="file" class="form-control" id="exampleInputUsername1" placeholder="file">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br><br>
+                    
+                    <h5 class="card-title">other related documents</h5>
+                    
+                    <div id="rowContainer">
+                      <div class="row dub-row">
+                          <div class="col-md-5">
+                              <div class="form-group">
+                                  <label for="exampleInputUsername1">Document</label>
+                                  <input type="file" class="form-control" id="exampleInputUsername1" placeholder="file">
+                              </div>
+                          </div>
+                          <div class="col-md-5">
+                              <div class="form-group">
+                                  <label for="exampleInputUsername1">Aditional Detail</label>
+                                  <textarea name="" class="form-control" id="exampleInputUsername1" cols="30" rows="2"></textarea>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="form-group">
+                                  <label for="exampleInputUsername1">&nbsp;&nbsp;</label>
+                                  <input type="button" class="form-control addRowBtn" value="Add">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+
                   </form>
                 </div>
               </div>
@@ -94,6 +130,26 @@
   <script src="../../js/typeahead.js"></script>
   <script src="../../js/select2.js"></script>
   <!-- End custom js for this page-->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.addRowBtn').addEventListener('click', function() {
+            var row = document.querySelector('.dub-row');
+            var newRow = row.cloneNode(true);
+            var removeBtn = document.createElement('input');
+            removeBtn.setAttribute('type', 'button');
+            removeBtn.setAttribute('class', 'form-control removeRowBtn');
+            removeBtn.setAttribute('value', 'Remove');
+            removeBtn.addEventListener('click', function() {
+                newRow.remove();
+            });
+            newRow.appendChild(removeBtn);
+            document.getElementById('rowContainer').appendChild(newRow);
+        });
+    });
+</script>
+
 </body>
 
 </html>
