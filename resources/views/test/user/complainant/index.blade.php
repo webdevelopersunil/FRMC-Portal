@@ -61,6 +61,7 @@
               <th> Complaint Against </th>
               <th> Department/Section </th>
               <th> ONGC Work Centre </th>
+              <th> Detailed Status </th>
               <th> Edit </th>
             </tr>
           </thead>
@@ -73,6 +74,7 @@
               <td> User1, User2 </td>
               <td> Department/Section 1 </td>
               <td> ONGC Centre Noida </td>
+              <td> Visible to all users </td>
               <td>
                 <a href="{{ route('complainant.create') }}">Edit</a> 
               </td>

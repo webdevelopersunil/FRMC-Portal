@@ -44,7 +44,7 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Dashboard</h3>
+                  <h3 class="font-weight-bold">User Dashboard</h3>
                   <!-- <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6> -->
                 </div>
                 <div class="col-12 col-xl-4">
@@ -127,6 +127,7 @@
                               <th> Complaint Against </th>
                               <th> Department/Section </th>
                               <th> ONGC Work Centre </th>
+                              <th> Detailed Status </th>
                               <th> Status </th>
                               <th>Action</th>
                             </tr>
@@ -140,6 +141,7 @@
                             <td> User1, User2 </td>
                             <td> Department/Section 1 </td>
                             <td> ONGC Centre Noida </td>
+                            <td> Visible to all users </td>
                             <td> Status </td>
                             <td>
                               <a href="{{ route('complainant.create') }}">Edit</a> 

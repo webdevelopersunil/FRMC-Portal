@@ -40,7 +40,7 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Registration of Complainant</h4>
+                  <h4 class="card-title">Updation by the office of FCO</h4>
                   <p class="card-description" onclick="window.location='{{ route('otp.confirmation') }}'" > otp confirmation </p>
 
                   <form class="forms-sample" action="{{ route('fco.complainant.index') }}" >
@@ -102,6 +102,68 @@
                           </div>
                         </div>
                     </div>
+
+                    
+                    <br> <br>
+                    <h5 class="card-title">Updation by the office of FCO</h5>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Public</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">&nbsp &nbsp</label>
+                            <input type="button" value="Add" class="form-control" >
+                        </div>
+                      </div>
+                    </div>
+
+
+
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Public – Visible to all users</h4>
+                  <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Private</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                      <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">&nbsp &nbsp</label>
+                            <input type="button" value="Add" class="form-control" >
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Private – Visible to only the users associated with the office of FCO</h4>
+                  <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
 
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
