@@ -110,26 +110,28 @@
 
                     <!-- Additional Input -->
                     
-                    <div class="row" style="border: 1px solid black;">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Title </label>
-                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Document</label>
-                                <input type="file" class="form-control" id="exampleInputUsername1" placeholder="Username">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="exampleInputUsername1">Add an extra fields</label>
-                                <input type="button" class="form-control" id="exampleInputUsername1" value="Add">
-                            </div>
-                        </div>
-                    </div>
+                    <div id="rowContainer">
+                      <div class="row dub-row">
+                          <div class="col-md-5">
+                              <div class="form-group">
+                                  <label for="exampleInputUsername1">Document</label>
+                                  <input type="file" class="form-control" id="exampleInputUsername1" placeholder="file">
+                              </div>
+                          </div>
+                          <div class="col-md-5">
+                              <div class="form-group">
+                                  <label for="exampleInputUsername1">Additional Detail</label>
+                                  <textarea name="" class="form-control" id="exampleInputUsername1" cols="30" rows="2"></textarea>
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <div class="form-group button-here ">
+                                  <label for="exampleInputUsername1">&nbsp;&nbsp;</label>
+                                  <input type="button" class="form-control addRowBtn btn btn-primary" value="Add">
+                              </div>
+                          </div>
+                      </div>
+                    </div> 
 
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
@@ -188,6 +190,29 @@
             otherInput.disabled = true;
         }
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.addRowBtn').addEventListener('click', function() {
+        var row = document.querySelector('.dub-row');
+        var newRow = row.cloneNode(true);
+        
+        // Remove the "Add" button from the cloned row
+        newRow.querySelector('.addRowBtn').remove();
+
+        var removeBtn = document.createElement('input');
+        removeBtn.setAttribute('type', 'button');
+        removeBtn.setAttribute('class', 'form-control removeRowBtn btn btn-danger');
+        removeBtn.setAttribute('value', 'Remove');
+        removeBtn.addEventListener('click', function() {
+            newRow.remove();
+        });
+
+        newRow.querySelector('.button-here').appendChild(removeBtn);
+
+        document.getElementById('rowContainer').appendChild(newRow);
+    });
+});
+
 </script>
   <!-- End custom js for this page-->
 </body>
