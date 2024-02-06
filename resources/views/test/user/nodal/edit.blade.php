@@ -71,18 +71,18 @@
                           </div>
                           <div class="col-md-5">
                               <div class="form-group">
-                                  <label for="exampleInputUsername1">Aditional Detail</label>
+                                  <label for="exampleInputUsername1">Additional Detail</label>
                                   <textarea name="" class="form-control" id="exampleInputUsername1" cols="30" rows="2"></textarea>
                               </div>
                           </div>
                           <div class="col-md-2">
-                              <div class="form-group">
+                              <div class="form-group button-here ">
                                   <label for="exampleInputUsername1">&nbsp;&nbsp;</label>
-                                  <input type="button" class="form-control addRowBtn" value="Add">
+                                  <input type="button" class="form-control addRowBtn btn btn-primary" value="Add">
                               </div>
                           </div>
                       </div>
-                  </div>
+                  </div>                  
 
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
@@ -134,20 +134,27 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('.addRowBtn').addEventListener('click', function() {
-            var row = document.querySelector('.dub-row');
-            var newRow = row.cloneNode(true);
-            var removeBtn = document.createElement('input');
-            removeBtn.setAttribute('type', 'button');
-            removeBtn.setAttribute('class', 'form-control removeRowBtn');
-            removeBtn.setAttribute('value', 'Remove');
-            removeBtn.addEventListener('click', function() {
-                newRow.remove();
-            });
-            newRow.appendChild(removeBtn);
-            document.getElementById('rowContainer').appendChild(newRow);
+    document.querySelector('.addRowBtn').addEventListener('click', function() {
+        var row = document.querySelector('.dub-row');
+        var newRow = row.cloneNode(true);
+        
+        // Remove the "Add" button from the cloned row
+        newRow.querySelector('.addRowBtn').remove();
+
+        var removeBtn = document.createElement('input');
+        removeBtn.setAttribute('type', 'button');
+        removeBtn.setAttribute('class', 'form-control removeRowBtn btn btn-danger');
+        removeBtn.setAttribute('value', 'Remove');
+        removeBtn.addEventListener('click', function() {
+            newRow.remove();
         });
+
+        newRow.querySelector('.button-here').appendChild(removeBtn);
+
+        document.getElementById('rowContainer').appendChild(newRow);
     });
+});
+
 </script>
 
 </body>
