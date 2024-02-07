@@ -17,11 +17,24 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('test.user.dashboard');
 })->name('dashboard');
     
 
+
+// Auth Sample Routes
+Route::get('/', function () {
+    return view('test.auth.login');
+})->name('auth.login');
+
+Route::get('/register', function () {
+    return view('test.auth.register');
+})->name('auth.register');
+
+
+
+// auth.forgot-password
 
 
 // Sample Routes
