@@ -119,7 +119,7 @@
                         </div>
                         <div class="card">
                           <div class="card-body">
-                              <h4 class="card-title">Private – Visible to only the users associated with the office of FCO</h4>
+                              <h4 class="card-title">Public – Visible to all users</h4>
                               <ul id="public_visible">
                                   <li>Lorem ipsum dolor sit amet <a href="#" style="color:red; text-align:right;" class="removeItem">X</a></li>
                               </ul>
@@ -139,7 +139,7 @@
                           </div>
                           <div class="card">
                             <div class="card-body">
-                              <h4 class="card-title">Public – Visible to all users</h4>
+                              <h4 class="card-title">Private – Visible to only the users associated with the office of FCO</h4>
                               <ul id="private_visible" >
                                 <li>Lorem ipsum dolor sit amet</li>
                               </ul>
